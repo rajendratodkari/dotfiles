@@ -11,8 +11,11 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size = 1
 set smartindent
+
 map <silent> <C-n> :NERDTreeToggle<CR>
 nmap <leader>l :set list!<CR>
+
+set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h20
 
 " Vundle setup "
 set nocompatible
