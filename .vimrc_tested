@@ -1,0 +1,83 @@
+set nocompatible
+
+set syntax=on
+set t_Co=256
+set hlsearch
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set smartindent
+
+set list
+"set listchars=tab:>.,trail:.,extends:#,nbsp:.
+exec "set listchars=tab:\u25B6\u00A0,trail:\uB7,eol:\u21B5,nbsp:."
+hi NonText ctermfg=8 guifg=DarkGray
+hi Whitespace ctermfg=DarkGray
+match Whitespace /\s/
+
+set hidden
+
+set tabstop=4					" a tab is four spaces
+set autoindent					" always set autoindenting on
+set copyindent					" copy the previous indentation on autoindenting
+set number						" always show line numbers
+set relativenumber						" always show line numbers
+set shiftwidth=4				" number of spaces to use for autoindenting
+set shiftround					" use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch					" set show matching parenthesis
+set ignorecase					" ignore case when searching
+set smartcase					" ignore case if search pattern is all lowercase, case-sensitive otherwise
+set smarttab					" insert tabs on the start of a line according to shiftwidth, not tabstop
+set hlsearch					" highlight search terms
+set incsearch					" show search matches as you type
+set backspace=indent,eol,start	" allow backspacing over everything in insert mode
+
+set history=1000				" remember more commands and search history
+set undolevels=1000				" use many muchos levels of undo
+set title						" change the terminal's title
+set visualbell					" don't beep
+set noerrorbells				" don't beep
+set wildignore=*.swp,*.bak,*.pyc,*.class
+
+set nobackup
+set noswapfile
+
+set pastetoggle=<F2>
+
+" Use Q for formatting the current paragraph (or selection)
+vmap Q gq
+nmap Q gqap
+
+"If you are still getting used to Vim and want to force yourself to stop using the arrow keys, add this:
+
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+"If you like long lines with line wrapping enabled, this solves the problem that pressing down jumpes your cursor “over” the current line to the next line. It changes behaviour so that it jumps to the next row in the editor (much more natural):
+
+nnoremap j gj
+nnoremap k gk
+
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+
+Plugin 'gmarik/vundle'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+
+call vundle#end()
+
+filetype plugin indent on
+
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+map  <C-l> :tabn<CR>
+map  <C-h> :tabp<CR>
+map  <C-n> :tabnew<CR>
+
+set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h10
