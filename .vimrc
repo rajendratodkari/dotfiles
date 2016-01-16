@@ -22,7 +22,7 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+call vundle#begin()
 
 Plugin 'gmarik/vundle'
 Plugin 'bling/vim-airline'
@@ -68,6 +68,8 @@ Plugin 'scrooloose/nerdtree'
 "Plugin 'vim-session'
 "Plugin 'vim-surround'
 
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 syntax on
 filetype plugin indent on
