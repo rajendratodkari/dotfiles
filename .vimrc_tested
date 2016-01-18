@@ -21,7 +21,7 @@ set tabstop=4					" a tab is four spaces
 set autoindent					" always set autoindenting on
 set copyindent					" copy the previous indentation on autoindenting
 set number						" always show line numbers
-set relativenumber						" always show line numbers
+set relativenumber				" always show line numbers
 set shiftwidth=4				" number of spaces to use for autoindenting
 set shiftround					" use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch					" set show matching parenthesis
@@ -42,7 +42,7 @@ set wildignore=*.swp,*.bak,*.pyc,*.class
 set nobackup
 set noswapfile
 
-set pastetoggle=<F2>
+set pastetoggle=<F8>
 
 " Use Q for formatting the current paragraph (or selection)
 vmap Q gq
@@ -60,6 +60,12 @@ map <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
+imap jk <Esc>
+
+nnoremap a ^
+nnoremap ; $
+nnoremap . <S-%>
+
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim/
@@ -67,17 +73,19 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle'
 Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 
 call vundle#end()
-
 filetype plugin indent on
-
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 map  <C-l> :tabn<CR>
 map  <C-h> :tabp<CR>
 map  <C-n> :tabnew<CR>
-
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h10
+
+set laststatus=2
+set fillchars+=stl:\ ,stlnc:\
+set encoding=utf-8
+
