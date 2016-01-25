@@ -10,8 +10,8 @@ set smartindent
 set list
 "set listchars=tab:>.,trail:.,extends:#,nbsp:.
 exec "set listchars=tab:\u25B6\u00A0,trail:\uB7,eol:\u21B5,nbsp:."
-hi NonText ctermfg=8 guifg=DarkGray
-hi Whitespace ctermfg=DarkGray
+hi NonText ctermfg=16 guifg=#000000
+hi Whitespace ctermfg=16
 match Whitespace /\s/
 
 set hidden
@@ -88,4 +88,3 @@ let g:nerdtree_tabs_open_on_console_startup=1
 set laststatus=2
 set fillchars+=stl:\ ,stlnc:\
 set encoding=utf-8
-
