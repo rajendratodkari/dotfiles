@@ -22,7 +22,8 @@ set hidden
 set tabstop=4					" a tab is four spaces
 set autoindent					" always set autoindenting on
 set copyindent					" copy the previous indentation on autoindenting
-set number						" always show line numbers
+"set number						" always show line numbers
+set mouse=a
 set relativenumber				" always show line numbers
 set shiftwidth=4				" number of spaces to use for autoindenting
 set shiftround					" use multiple of shiftwidth when indenting with '<' and '>'
@@ -57,14 +58,9 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-"If you like long lines with line wrapping enabled, this solves the problem that pressing down jumpes your cursor “over” the current line to the next line. It changes behaviour so that it jumps to the next row in the editor (much more natural):
-
-nnoremap j gj
-nnoremap k gk
-
 imap jk <Esc>
 
-nnoremap a ^
+nnoremap s ^
 nnoremap ; $
 nnoremap . <S-%>
 
@@ -92,4 +88,3 @@ let g:nerdtree_tabs_open_on_console_startup=1
 set laststatus=2
 set fillchars+=stl:\ ,stlnc:\
 set encoding=utf-8
-
