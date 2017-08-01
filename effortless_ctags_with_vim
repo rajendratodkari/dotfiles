@@ -1,3 +1,12 @@
+brew tap universal-ctags/universal-ctags
+brew install --HEAD universal-ctags
+
+OR 
+
+sudo apt-get install exuberant-ctags
+
+=================================================================================
+
 Effortless Ctags with Git
 
 08 Aug 2011
